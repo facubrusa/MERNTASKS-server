@@ -26,8 +26,13 @@ app.use('/api/tasks', require('./routes/tasks'));
 
 console.log('step 5');
 // Start the sv
-app.listen(port, '0.0.0.0', () => {
+/* app.listen(port, '0.0.0.0', () => {
     console.log(`The server is running on the port ${port}`);
+}); */
+
+app.listen(process.env.PORT || 3000, '0.0.0.0', function (err) {
+    if (err) throw err
+    console.log(`server listening on ${app.server.address().port}`)
 });
 
 console.log('step 6');
