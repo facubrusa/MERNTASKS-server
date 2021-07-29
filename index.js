@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json({ extended: true }));
 
 // Port of the server (app)
-const PORT = process.env.PORT || 5000;
+const port = process.env.port || 5000;
 
 // Import the routes
 app.use('/api/users', require('./routes/users'));
@@ -24,6 +24,6 @@ app.use('/api/projects', require('./routes/projects'));
 app.use('/api/tasks', require('./routes/tasks'));
 
 // Start the sv
-app.listen(PORT, () => {
-    console.log(`The server is running on the port ${PORT}`);
+app.listen(port, '0.0.0.0', () => {
+    console.log(`The server is running on the port ${port}`);
 });
