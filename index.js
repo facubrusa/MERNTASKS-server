@@ -30,9 +30,9 @@ console.log('step 5');
     console.log(`The server is running on the port ${port}`);
 }); */
 
-app.listen(process.env.PORT || 3000, '0.0.0.0', function (err) {
+app.listen(process.env.PORT || 3000, process.env.HOST || '::', err => {
     if (err) throw err
     console.log(`server listening on ${app.server.address().port}`)
-});
+})
 
 console.log('step 6');
