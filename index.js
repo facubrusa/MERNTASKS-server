@@ -2,7 +2,7 @@ const express = require('express');
 const connectDB = require('./config/db');
 const cors = require('cors');
 
-console.log('step 1');
+console.log('step 1111');
 // Create the server
 const app = express();
 console.log('step 2');
@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json({ extended: true }));
 console.log('step 4');
 // Port of the server (app)
-const port = process.env.port || 5000;
+const port = process.env.port || 4000;
 
 // Import the routes
 app.use('/api/users', require('./routes/users'));
